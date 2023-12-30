@@ -51,5 +51,16 @@ trait Configure {
         if(!empty($notification)){
             echo $notification . PHP_EOL;
         }
+        $command = Core::binary($object) .
+            ' r3m_io/basic apache2 site enable' .
+            ' -server.name=example.local'
+        ;
+        Core::execute($object, $command, $output, $notification);
+        if(!empty($output)){
+            echo $output . PHP_EOL;
+        }
+        if(!empty($notification)){
+            echo $notification . PHP_EOL;
+        }
     }
 }
