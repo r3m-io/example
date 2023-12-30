@@ -4,6 +4,7 @@ namespace Package\R3m\Io\Example\Trait;
 use R3m\Io\App;
 use R3m\Io\Config;
 
+use R3m\Io\Exception\FileWriteException;
 use R3m\Io\Module\Dir;
 use R3m\Io\Module\Core;
 use R3m\Io\Module\Event;
@@ -72,6 +73,11 @@ trait Configure {
         }
     }
 
+    /**
+     * @throws ObjectException
+     * @throws FileWriteException
+     * @throws Exception
+     */
     public function host_create($options=[]): void
     {
         $options = Core::object($options, Core::OBJECT_OBJECT);
@@ -114,10 +120,11 @@ trait Configure {
         ){
             $record->uuid = $exist['node']->uuid;
             $response = $node->put($class, $node->role_system(), $record);
-        } else {
+        } elseif(!$exist) {
             $response = $node->create($class, $node->role_system(), $record);
+        } else {
+            throw new Exception('Host create error: host already exists, use option -force to overwrite');
         }
-        d($response);
     }
 
     public function host_mapper_create($options=[]): void
