@@ -46,7 +46,7 @@
     </p>
     <h3>License</h3>
     <pre>
-{{file.read(config('framework.dir.root') + 'LICENSE')}}
+        {{debug({{file.read(config('framework.dir.root') + 'LICENSE')}})}}
     </pre>
     <h3>Support</h3>
     <p>
