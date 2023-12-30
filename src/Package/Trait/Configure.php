@@ -79,7 +79,45 @@ trait Configure {
         if($object->config(Config::POSIX_ID) !== 0){
             return;
         }
-        d($options);
+        $force = false;
+        if(property_exists($options, 'force')){
+            $force = $options->force;
+        }
+        $node = new Node($object);
+        $class = 'System.Host';
+        $record = (object) [
+            'name' => 'Example.Com',
+            'domain' => 'example',
+            'extension' => 'com',
+            'url' => (object) [
+                'development' => 'example.local',
+                'production' => 'example.com',
+            ]
+        ];
+        $exist = $node->record($class, $node->role_system(), [
+            'where' => [
+                [
+                    'value' => $record->name,
+                    'attribute' => 'name',
+                    'operator' => '===',
+                ]
+            ]
+        ]);
+        if($exist && $force === false){
+            return;
+        }
+        if(
+            $exist &&
+            is_array($exist) &&
+            array_key_exists('node', $exist) &&
+            property_exists($exist['node'], 'uuid')
+        ){
+            $record->uuid = $exist['node']->uuid;
+            $response = $node->put($class, $node->role_system(), $record);
+        } else {
+            $response = $node->create($class, $node->role_system(), $record);
+        }
+        d($response);
     }
 
     public function host_mapper_create($options=[]): void
