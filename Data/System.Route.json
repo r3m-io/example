@@ -1,0 +1,34 @@
+{
+  "System": {
+    "Route": [
+      {
+        "#class": "System.Route",
+        "name": "r3m-io-cli-example",
+        "path": "r3m_io\/example",
+        "controller": "Package:R3m:Io:Example:Controller:Cli:run",
+        "priority": 1001,
+        "request": {
+          "language": "en"
+        },
+        "method": [
+          "CLI"
+        ]
+      },
+      {
+        "#class": "System.Route",
+        "name": "index",
+        "path": "\/",
+        "host": "example.com",
+        "controller": "Domain:Www.Example.Com:Controller:Index:run",
+        "priority": 2001,
+        "request": {
+          "language": "en"
+        },
+        "method": [
+          "GET",
+          "POST"
+        ]
+      }
+    ]
+  }
+}
