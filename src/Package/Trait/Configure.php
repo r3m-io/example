@@ -71,4 +71,12 @@ trait Configure {
             echo $notification . PHP_EOL;
         }
     }
+
+    public function host_create($options=[]){
+        d($options);
+    }
+
+    public function host_mapper_create($options=[]){
+        d($options);
+    }
 }
