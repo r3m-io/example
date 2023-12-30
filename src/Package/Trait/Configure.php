@@ -78,12 +78,12 @@ trait Configure {
      * @throws FileWriteException
      * @throws Exception
      */
-    public function host_create($options=[]): void
+    public function host_create($options=[]): bool
     {
         $options = Core::object($options, Core::OBJECT_OBJECT);
         $object = $this->object();
         if($object->config(Config::POSIX_ID) !== 0){
-            return;
+            return false;
         }
         $force = false;
         if(property_exists($options, 'force')){
@@ -109,10 +109,11 @@ trait Configure {
                 ]
             ]
         ]);
+        $response = [];
         if($exist && $force === false){
-            return;
+            throw new Exception('Host create error: host already exists, use option -force to overwrite');
         }
-        if(
+        elseif(
             $exist &&
             is_array($exist) &&
             array_key_exists('node', $exist) &&
@@ -122,18 +123,62 @@ trait Configure {
             $response = $node->put($class, $node->role_system(), $record);
         } elseif(!$exist) {
             $response = $node->create($class, $node->role_system(), $record);
-        } else {
-            throw new Exception('Host create error: host already exists, use option -force to overwrite');
         }
+        if(array_key_exists('node', $response)){
+            return true;
+        }
+        return false;
     }
 
-    public function host_mapper_create($options=[]): void
+    /**
+     * @throws ObjectException
+     * @throws FileWriteException
+     * @throws Exception
+     */
+    public function host_mapper_create($options=[]): bool
     {
         $options = Core::object($options, Core::OBJECT_OBJECT);
         $object = $this->object();
         if($object->config(Config::POSIX_ID) !== 0){
-            return;
+            return false;
         }
-        d($options);
+        $force = false;
+        if(property_exists($options, 'force')){
+            $force = $options->force;
+        }
+        $node = new Node($object);
+        $class = 'System.Host.Mapper';
+        $record = (object) [
+            'source' => 'example.local',
+            'destination' => 'example.com'
+        ];
+        $exist = $node->record($class, $node->role_system(), [
+            'where' => [
+                [
+                    'value' => $record->source,
+                    'attribute' => 'source',
+                    'operator' => '===',
+                ]
+            ]
+        ]);
+        $response = [];
+        if($exist && $force === false){
+            throw new Exception('Host.Mapper create error: host.map already exists, use option -force to overwrite');
+        }
+        elseif(
+            $exist &&
+            is_array($exist) &&
+            array_key_exists('node', $exist) &&
+            property_exists($exist['node'], 'uuid')
+        ){
+            $record->uuid = $exist['node']->uuid;
+            $response = $node->put($class, $node->role_system(), $record);
+        } elseif(!$exist) {
+            $response = $node->create($class, $node->role_system(), $record);
+        }
+        if(array_key_exists('node', $response)){
+            return true;
+        }
+        return false;
     }
 }
