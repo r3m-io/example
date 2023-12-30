@@ -74,11 +74,21 @@ trait Configure {
 
     public function host_create($options=[]): void
     {
+        $options = Core::object($options, Core::OBJECT_OBJECT);
+        $object = $this->object();
+        if($object->config(Config::POSIX_ID) !== 0){
+            return;
+        }
         d($options);
     }
 
     public function host_mapper_create($options=[]): void
     {
+        $options = Core::object($options, Core::OBJECT_OBJECT);
+        $object = $this->object();
+        if($object->config(Config::POSIX_ID) !== 0){
+            return;
+        }
         d($options);
     }
 }
