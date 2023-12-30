@@ -1,5 +1,5 @@
 <?php
-namespace Domain\www_example_com\Controller;
+namespace Domain\Www_Example_Com\Controller;
 
 use R3m\Io\App;
 
@@ -62,7 +62,7 @@ class Index extends Controller {
             ]);
             if($view === null){
                 Index::parse_read($object, $url);
-                //$object->set('template.name', Index::MAIN . '/' . Index::MAIN);
+                $object->set('template.name', Index::MAIN . '/' . Index::MAIN);
                 $url = Index::locate($object);
                 $view = Index::response($object, $url);
                 Cache::write($object, [
