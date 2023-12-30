@@ -96,8 +96,8 @@ trait Configure {
             'domain' => 'example',
             'extension' => 'com',
             'url' => (object) [
-                'development' => 'example.local',
-                'production' => 'example.com',
+                'development' => 'https://example.local/',
+                'production' => 'https://example.com/',
             ]
         ];
         $exist = $node->record($class, $node->role_system(), [
