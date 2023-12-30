@@ -19,7 +19,7 @@
         "name": "index",
         "path": "\/",
         "host": "example.com",
-        "controller": "Domain:Www.Example.Com:Controller:Index:run",
+        "controller": "Domain:Www.Example.Com:Controller:Index:main",
         "priority": 2001,
         "request": {
           "language": "en"
