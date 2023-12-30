@@ -31,7 +31,6 @@ trait Configure {
         if($object->config(Config::POSIX_ID) !== 0){
             return;
         }
-        ddd($options);
         $command = Core::binary($object) .
             ' r3m_io/basic apache2 site create' .
             ' -server.admin=development@universeorange.com' .
