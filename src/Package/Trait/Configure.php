@@ -72,11 +72,13 @@ trait Configure {
         }
     }
 
-    public function host_create($options=[]){
+    public function host_create($options=[]): void
+    {
         d($options);
     }
 
-    public function host_mapper_create($options=[]){
+    public function host_mapper_create($options=[]): void
+    {
         d($options);
     }
 }
