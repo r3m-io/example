@@ -1,5 +1,5 @@
 <?php
-namespace Domain\Www_Example_Com\Controller;
+namespace Domain\Example_Com\Controller;
 
 use R3m\Io\App;
 
