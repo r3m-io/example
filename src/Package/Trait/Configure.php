@@ -38,6 +38,13 @@ trait Configure {
             ' -server.name=example.com' .
             ' -development'
         ;
+        foreach($options as $key => $value){
+            if($value === true){
+                $command .= ' -' . $key;
+            } else {
+                $command .= ' -' . $key . '=' . $value;
+            }
+        }
         Core::execute($object, $command, $output, $notification);
         if(!empty($output)){
             echo $output . PHP_EOL;
