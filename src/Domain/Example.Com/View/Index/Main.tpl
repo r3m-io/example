@@ -1,9 +1,9 @@
 {{R3M}}
 <section name="main">
     <div class="logo">
-        <a href="{{server.url('www.r3m.io')}}" title="{{server.url('www.r3m.io')}}"><img src="{{host.url()}}Icon/android-chrome-192x192.png" alt="R3M Logo"></a>
+        <a href="https://www.r3m.io/" title="https://www.r3m.io"><img src="{{host.url()}}Icon/android-chrome-192x192.png" alt="R3M Logo"></a>
     </div>
-    <h1><a href="{{server.url('www.r3m.io')}}" title="{{server.url('www.r3m.io')}}"><strong>{{literal}}{{</strong>R3M<strong>}}{{/literal}}</strong></a></h1>
+    <h1><a href="https://www.r3m.io/" title="https://www.r3m.io/"><strong>{{literal}}{{</strong>R3M<strong>}}{{/literal}}</strong></a></h1>
     <h3>About</h3>
     <p>
         R3M/Framework is a robust, high-performance PHP framework that streamlines the process of developing comprehensive websites and applications. <br>
