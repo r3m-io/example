@@ -26,10 +26,12 @@ trait Configure {
      */
     public function site($options=[]): void
     {
+        $options = Core::object($options, Core::OBJECT_OBJECT);
         $object = $this->object();
         if($object->config(Config::POSIX_ID) !== 0){
             return;
         }
+        ddd($options);
         $command = Core::binary($object) .
             ' r3m_io/basic apache2 site create' .
             ' -server.admin=development@universeorange.com' .
