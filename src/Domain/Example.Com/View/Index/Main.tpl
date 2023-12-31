@@ -46,12 +46,16 @@
     </p>
     <h3>License</h3>
     <pre>
-        {{debug({{file.read(config('framework.dir.root') + 'LICENSE')}})}}
+{{file.read(config('framework.dir.root') + 'LICENSE')}}
     </pre>
     <h3>Support</h3>
     <p>
         If you want support, you can get it! <br>
         Contact <a href="mailto:info@universeorange.com">info@universeorange.com</a>.
     </p>
+    <h3>Debug</h3>
+    {{d(config())}}
+    {{d(request())}}
+    {{d(data())}}
 </section>
 
