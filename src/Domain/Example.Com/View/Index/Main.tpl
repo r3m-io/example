@@ -54,6 +54,10 @@
         Contact <a href="mailto:info@universeorange.com">info@universeorange.com</a>.
     </p>
     <h3>Debug</h3>
-    {{d(data())}}
+    {{if(config('framework.environment') === 'development')}}
+{{d(config())}}
+{{d(data())}}
+    {{/if}}
+
 </section>
 
