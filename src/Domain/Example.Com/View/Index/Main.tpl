@@ -56,9 +56,7 @@
     <h3>Debug</h3>
     {{if(config('framework.environment') === 'development')}}
 {{d(config('time'))}}
-    /*
 {{d(data('r3m.io.parse.literal'))}}
-    */
     {{/if}}
 
 </section>
