@@ -56,6 +56,7 @@
     <h3>Debug</h3>
     {{if(config('framework.environment') === 'development')}}
 {{d(config('time'))}}
+{{d(data())}}
     {{/if}}
 
 </section>
