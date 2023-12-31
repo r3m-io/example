@@ -53,5 +53,11 @@
         If you want support, you can get it! <br>
         Contact <a href="mailto:info@universeorange.com">info@universeorange.com</a>.
     </p>
+    <h3>Debug</h3>
+    {{if(config('framework.environment') === 'development')}}
+    {{d(config())}}
+    {{d(data())}}
+    {{/if}}
+
 </section>
 
