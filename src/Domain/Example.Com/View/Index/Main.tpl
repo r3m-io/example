@@ -54,8 +54,6 @@
         Contact <a href="mailto:info@universeorange.com">info@universeorange.com</a>.
     </p>
     <h3>Debug</h3>
-    {{d(config())}}
-    {{d(request())}}
     {{d(data())}}
 </section>
 
