@@ -203,23 +203,42 @@ trait Configure {
         Core::execute($object, $command, $output, $notification);
         if (!empty($output)) {
             $has = trim($output);
-            switch ($has){
+            switch ($has) {
                 case 'true':
-                    d('ytrtue');
                     $has = true;
                     break;
                 case 'false':
-                    d('yes');
                     $has = false;
                     break;
 
             }
-            ddd($has);
         }
-        if (!empty($notification)) {
-            ddd($notification);
+        if (
+            $has === false
+        ) {
+            //create
+            $command = Core::binary($object) . ' r3m_io/host name add -ip=127.0.0.1 -host=example.local';
+            Core::execute($object, $command, $output, $notification);
+            d($output);
+            d($notification);
+            return true;
+        } elseif (
+            $has === true &&
+            $force === true
+        ) {
+            //create
+            $command = Core::binary($object) . ' r3m_io/host name delete -host=example.local';
+            Core::execute($object, $command, $output, $notification);
+            d($output);
+            d($notification);
+            //create
+            $command = Core::binary($object) . ' r3m_io/host name add -ip=127.0.0.1 -host=example.local';
+            Core::execute($object, $command, $output, $notification);
+            d($output);
+            d($notification);
+            return true;
         }
-        return true;
+        return false;
     }
 
 }
