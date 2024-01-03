@@ -219,26 +219,35 @@ trait Configure {
             //create
             $command = Core::binary($object) . ' r3m_io/host name add -ip=127.0.0.1 -host=example.local';
             Core::execute($object, $command, $output, $notification);
-            d($output);
-            d($notification);
+            if(!empty($output)){
+                echo $output . PHP_EOL;
+            }
+            if(!empty($notification)){
+                echo $notification . PHP_EOL;
+            }
             return true;
         } elseif (
             $has === true &&
             $force === true
         ) {
-            //create
             $command = Core::binary($object) . ' r3m_io/host name delete -host=example.local';
             Core::execute($object, $command, $output, $notification);
-            d($output);
-            d($notification);
-            //create
+            if(!empty($output)){
+                echo $output . PHP_EOL;
+            }
+            if(!empty($notification)){
+                echo $notification . PHP_EOL;
+            }
             $command = Core::binary($object) . ' r3m_io/host name add -ip=127.0.0.1 -host=example.local';
             Core::execute($object, $command, $output, $notification);
-            d($output);
-            d($notification);
+            if(!empty($output)){
+                echo $output . PHP_EOL;
+            }
+            if(!empty($notification)){
+                echo $notification . PHP_EOL;
+            }
             return true;
         }
         return false;
     }
-
 }
