@@ -202,7 +202,7 @@ trait Configure {
         $command = Core::binary($object) . ' r3m_io/host name has -host=example.local';
         Core::execute($object, $command, $output, $notification);
         if (!empty($output)) {
-            $has = trim($command);
+            $has = trim($output);
             switch ($has){
                 case 'true':
                     $has = true;
