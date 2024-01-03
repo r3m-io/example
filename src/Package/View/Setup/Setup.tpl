@@ -6,4 +6,5 @@
 {{Package.R3m.Io.Example:Configure:site($options)}}
 {{$host.create = Package.R3m.Io.Example:Configure:host.create($options)}}
 {{$host.mapper.create = Package.R3m.Io.Example:Configure:host.mapper.create($options)}}
+{{$host.name.create = Package.R3m.Io.Example:Configure:host.name.create($options)}}
 {{/if}}
