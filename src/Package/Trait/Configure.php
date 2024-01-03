@@ -233,6 +233,7 @@ trait Configure {
             $command = Core::binary($object) . ' r3m_io/host name delete -host=example.local';
             Core::execute($object, $command, $output, $notification);
             if(!empty($output)){
+                d($output);
                 echo $output . PHP_EOL;
             }
             if(!empty($notification)){
