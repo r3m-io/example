@@ -233,20 +233,18 @@ trait Configure {
             $command = Core::binary($object) . ' r3m_io/host name delete -host=example.local';
             Core::execute($object, $command, $output, $notification);
             if(!empty($output)){
-                d($output);
-                echo $output . PHP_EOL;
+                echo rtrim($output, PHP_EOL) . PHP_EOL;
             }
             if(!empty($notification)){
-                ddd($notification);
-                echo $notification . PHP_EOL;
+                echo rtrim($notification, PHP_EOL) . PHP_EOL;
             }
             $command = Core::binary($object) . ' r3m_io/host name add -ip=127.0.0.1 -host=example.local';
             Core::execute($object, $command, $output, $notification);
             if(!empty($output)){
-                echo $output . PHP_EOL;
+                echo rtrim($output, PHP_EOL) . PHP_EOL;
             }
             if(!empty($notification)){
-                echo $notification . PHP_EOL;
+                echo rtrim($notification, PHP_EOL) . PHP_EOL;
             }
             return true;
         }
