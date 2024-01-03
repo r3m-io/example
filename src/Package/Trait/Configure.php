@@ -47,10 +47,10 @@ trait Configure {
         }
         Core::execute($object, $command, $output, $notification);
         if(!empty($output)){
-            echo $output . PHP_EOL;
+            echo rtrim($output, PHP_EOL) . PHP_EOL;
         }
         if(!empty($notification)){
-            echo $notification . PHP_EOL;
+            echo rtrim($notification, PHP_EOL) . PHP_EOL;
         }
         $command = Core::binary($object) .
             ' r3m_io/basic apache2 site enable' .
@@ -58,18 +58,18 @@ trait Configure {
         ;
         Core::execute($object, $command, $output, $notification);
         if(!empty($output)){
-            echo $output . PHP_EOL;
+            echo rtrim($output, PHP_EOL) . PHP_EOL;
         }
         if(!empty($notification)){
-            echo $notification . PHP_EOL;
+            echo rtrim($notification, PHP_EOL) . PHP_EOL;
         }
         $command = Core::binary($object) . ' r3m_io/basic apache2 reload';
         Core::execute($object, $command, $output, $notification);
         if(!empty($output)){
-            echo $output . PHP_EOL;
+            echo rtrim($output, PHP_EOL) . PHP_EOL;
         }
         if(!empty($notification)){
-            echo $notification . PHP_EOL;
+            echo rtrim($notification, PHP_EOL) . PHP_EOL;
         }
     }
 
@@ -210,7 +210,6 @@ trait Configure {
                 case 'false':
                     $has = false;
                     break;
-
             }
         }
         if (
@@ -220,10 +219,10 @@ trait Configure {
             $command = Core::binary($object) . ' r3m_io/host name add -ip=127.0.0.1 -host=example.local';
             Core::execute($object, $command, $output, $notification);
             if(!empty($output)){
-                echo $output . PHP_EOL;
+                echo rtrim($output, PHP_EOL) . PHP_EOL;
             }
             if(!empty($notification)){
-                echo $notification . PHP_EOL;
+                echo rtrim($notification, PHP_EOL) . PHP_EOL;
             }
             return true;
         } elseif (
