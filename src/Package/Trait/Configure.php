@@ -236,6 +236,7 @@ trait Configure {
                 echo $output . PHP_EOL;
             }
             if(!empty($notification)){
+                ddd($notification);
                 echo $notification . PHP_EOL;
             }
             $command = Core::binary($object) . ' r3m_io/host name add -ip=127.0.0.1 -host=example.local';
