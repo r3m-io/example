@@ -205,9 +205,11 @@ trait Configure {
             $has = trim($output);
             switch ($has){
                 case 'true':
+                    d('ytrtue');
                     $has = true;
                     break;
                 case 'false':
+                    d('yes');
                     $has = false;
                     break;
 
