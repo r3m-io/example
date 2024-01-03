@@ -198,10 +198,21 @@ trait Configure {
         if (property_exists($options, 'force')) {
             $force = $options->force;
         }
+        $has = false;
         $command = Core::binary($object) . ' r3m_io/host name has -host=example.local';
         Core::execute($object, $command, $output, $notification);
         if (!empty($output)) {
-            ddd($output);
+            $has = trim($command);
+            switch ($has){
+                case 'true':
+                    $has = true;
+                    break;
+                case 'false':
+                    $has = false;
+                    break;
+
+            }
+            ddd($has);
         }
         if (!empty($notification)) {
             ddd($notification);
