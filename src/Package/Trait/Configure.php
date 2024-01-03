@@ -191,20 +191,22 @@ trait Configure {
     {
         $options = Core::object($options, Core::OBJECT_OBJECT);
         $object = $this->object();
-        if($object->config(Config::POSIX_ID) !== 0){
+        if ($object->config(Config::POSIX_ID) !== 0) {
             return false;
         }
         $force = false;
-        if(property_exists($options, 'force')){
+        if (property_exists($options, 'force')) {
             $force = $options->force;
         }
         $command = Core::binary($object) . ' r3m_io/host name has -host=example.local';
         Core::execute($object, $command, $output, $notification);
-        if(!empty($output)){
+        if (!empty($output)) {
             ddd($output);
         }
-        if(!empty($notification)){
+        if (!empty($notification)) {
             ddd($notification);
         }
+        return true;
+    }
 
 }
