@@ -3,6 +3,7 @@ namespace Domain\Example_Com\Controller;
 
 use R3m\Io\App;
 
+use R3m\Io\Config;
 use R3m\Io\Module\Cache;
 use R3m\Io\Module\Controller;
 
@@ -35,6 +36,14 @@ class Index extends Controller {
      */
     public static function main(App $object): string
     {
+        $logger = false;
+        if($object->config('framework.environment') == Config::MODE_DEVELOPMENT){
+            $logger = $object->config('project.log.debug');
+        }
+        if($logger){
+            $duration = (microtime(true) - $object->config('time.start')) * 1000;
+            $object->logger($logger)->info('Duration: ' . $duration . ' ms', [ 'main' ]);
+        }
         $start = microtime(true);
         if(App::contentType($object) == App::CONTENT_TYPE_HTML){
             $cache_key = Cache::key($object, [
@@ -103,9 +112,9 @@ class Index extends Controller {
                 ]);
             }
         }
-        $duration = microtime(true) - $start;
-        if($object->config('project.log.name')){
-            $object->logger($object->config('project.log.name'))->info('Duration: ' . $duration, [ $cache_key ]);
+        if($logger){
+            $duration = (microtime(true) - $start) * 1000;
+            $object->logger($logger)->info('Duration: ' . $duration . ' ms', [ $cache_key ]);
         }
         return $view;
     }
