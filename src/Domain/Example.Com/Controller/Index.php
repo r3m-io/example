@@ -160,8 +160,8 @@ class Index extends Controller {
             ]);
             if($view === null){
                 d($url);
-                $data = Index::parse_read($object, $url);
-                ddd($data);
+                Index::parse_read($object, $url);
+                ddd($object->data('template'));
                 $object->set('template.name', Index::MAIN . '/' . Index::MAIN);
                 $url = Index::locate($object);
                 $view = Index::response($object, $url);
