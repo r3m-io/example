@@ -162,7 +162,6 @@ class Index extends Controller {
                 Index::parse_read($object, $url);
                 $object->set('template.name', Index::MAIN . '/' . Index::MAIN);
                 $url = Index::locate($object);
-                ddd($url);
                 $view = Index::response($object, $url);
                 Cache::write($object, [
                     'key' => $cache_key,
