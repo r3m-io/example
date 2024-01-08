@@ -28,6 +28,21 @@
           "GET",
           "POST"
         ]
+      },
+      {
+        "#class": "System.Route",
+        "name": "debug",
+        "path": "\/Debug",
+        "host": "example.com",
+        "controller": "Domain:Example.Com:Controller:Index:debug",
+        "priority": 2002,
+        "request": {
+          "language": "en"
+        },
+        "method": [
+          "GET",
+          "POST"
+        ]
       }
     ]
   }
