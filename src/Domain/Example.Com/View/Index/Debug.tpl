@@ -5,10 +5,8 @@
     </div>
     <h1><a href="https://www.r3m.io/" title="https://www.r3m.io/"><strong>{{literal}}{{</strong>R3M<strong>}}{{/literal}}</strong></a></h1>
     <h3>Debug</h3>
-    <pre>
     {{if(config('framework.environment') === 'development')}}
-    {{d('{{$this}}')}}
+    {{dd('{{$this}}')}}
     {{/if}}
-    </pre>
 </section>
 
