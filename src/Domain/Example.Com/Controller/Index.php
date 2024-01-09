@@ -158,6 +158,7 @@ class Index extends Controller {
                 'key' => $cache_key,
                 'ttl' => Cache::INF,
             ]);
+            $view = null;
             if($view === null){
                 Index::parse_read($object, $url);
                 $object->set('template.name', Index::MAIN . '/' . Index::MAIN);
