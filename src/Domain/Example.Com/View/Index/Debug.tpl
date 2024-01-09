@@ -7,7 +7,7 @@
     <h3>Debug</h3>
     <pre>
     {{if(config('framework.environment') === 'development')}}
-    {{d('{{this}}')}}
+    {{d('{{$this}}')}}
     {{/if}}
     </pre>
 </section>
