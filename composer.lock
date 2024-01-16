@@ -287,16 +287,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/autoload.git",
-                "reference": "0370ac898b093755fd9554f1a239951c86b79d30"
+                "reference": "9611a3ab19917d25da7e2cda728fdc9f78194c41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/autoload/zipball/0370ac898b093755fd9554f1a239951c86b79d30",
-                "reference": "0370ac898b093755fd9554f1a239951c86b79d30",
+                "url": "https://api.github.com/repos/r3m-io/autoload/zipball/9611a3ab19917d25da7e2cda728fdc9f78194c41",
+                "reference": "9611a3ab19917d25da7e2cda728fdc9f78194c41",
                 "shasum": ""
             },
             "require": {
-                "r3m_io/framework": "*"
+                "r3m_io/framework": "dev-root"
             },
             "default-branch": true,
             "type": "library",
@@ -324,7 +324,7 @@
                 "issues": "https://github.com/r3m-io/autoload/issues",
                 "source": "https://github.com/r3m-io/autoload/tree/main"
             },
-            "time": "2023-12-25T22:34:38+00:00"
+            "time": "2024-01-12T17:17:21+00:00"
         },
         {
             "name": "r3m_io/basic",
@@ -332,12 +332,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/basic.git",
-                "reference": "3fed200d3241a57c1a2e4e9e51e480547957d841"
+                "reference": "5001c1837e884f30d416a0cd32dcac5cc4fbdce3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/basic/zipball/3fed200d3241a57c1a2e4e9e51e480547957d841",
-                "reference": "3fed200d3241a57c1a2e4e9e51e480547957d841",
+                "url": "https://api.github.com/repos/r3m-io/basic/zipball/5001c1837e884f30d416a0cd32dcac5cc4fbdce3",
+                "reference": "5001c1837e884f30d416a0cd32dcac5cc4fbdce3",
                 "shasum": ""
             },
             "require": {
@@ -371,7 +371,7 @@
                 "issues": "https://github.com/r3m-io/basic/issues",
                 "source": "https://github.com/r3m-io/basic/tree/main"
             },
-            "time": "2023-12-29T18:33:58+00:00"
+            "time": "2024-01-12T17:08:40+00:00"
         },
         {
             "name": "r3m_io/config",
@@ -379,12 +379,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/config.git",
-                "reference": "c8d997a42b7e63f2a9eb05ba4c8378df517da4bc"
+                "reference": "cc6d9740bcfbea5240b79b34b56f4c95a57f0a1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/config/zipball/c8d997a42b7e63f2a9eb05ba4c8378df517da4bc",
-                "reference": "c8d997a42b7e63f2a9eb05ba4c8378df517da4bc",
+                "url": "https://api.github.com/repos/r3m-io/config/zipball/cc6d9740bcfbea5240b79b34b56f4c95a57f0a1e",
+                "reference": "cc6d9740bcfbea5240b79b34b56f4c95a57f0a1e",
                 "shasum": ""
             },
             "require": {
@@ -419,7 +419,7 @@
                 "issues": "https://github.com/r3m-io/config/issues",
                 "source": "https://github.com/r3m-io/config/tree/main"
             },
-            "time": "2023-12-26T17:36:07+00:00"
+            "time": "2024-01-12T17:11:29+00:00"
         },
         {
             "name": "r3m_io/event",
@@ -427,19 +427,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/event.git",
-                "reference": "6b372f8944f39d80cf876e43aed18a7746f0cf2d"
+                "reference": "6fb39e25125a2e9fafc1b437379409600edb1e60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/event/zipball/6b372f8944f39d80cf876e43aed18a7746f0cf2d",
-                "reference": "6b372f8944f39d80cf876e43aed18a7746f0cf2d",
+                "url": "https://api.github.com/repos/r3m-io/event/zipball/6fb39e25125a2e9fafc1b437379409600edb1e60",
+                "reference": "6fb39e25125a2e9fafc1b437379409600edb1e60",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "ext-posix": "*",
                 "ext-zlib": "*",
-                "r3m_io/framework": "*"
+                "r3m_io/framework": "dev-root"
             },
             "default-branch": true,
             "type": "library",
@@ -467,7 +467,7 @@
                 "issues": "https://github.com/r3m-io/event/issues",
                 "source": "https://github.com/r3m-io/event/tree/main"
             },
-            "time": "2023-12-25T22:27:36+00:00"
+            "time": "2024-01-12T17:12:57+00:00"
         },
         {
             "name": "r3m_io/framework",
@@ -475,12 +475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/framework.git",
-                "reference": "ee67a4744832ff5963e18f40d274c1350b428505"
+                "reference": "8064a30500cef4d5607e9484dd0525184eebc5dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/framework/zipball/ee67a4744832ff5963e18f40d274c1350b428505",
-                "reference": "ee67a4744832ff5963e18f40d274c1350b428505",
+                "url": "https://api.github.com/repos/r3m-io/framework/zipball/8064a30500cef4d5607e9484dd0525184eebc5dc",
+                "reference": "8064a30500cef4d5607e9484dd0525184eebc5dc",
                 "shasum": ""
             },
             "require": {
@@ -541,7 +541,7 @@
                 "issues": "https://github.com/r3m-io/framework/issues",
                 "source": "https://github.com/r3m-io/framework/tree/root"
             },
-            "time": "2023-12-29T15:50:07+00:00"
+            "time": "2024-01-12T16:19:02+00:00"
         },
         {
             "name": "r3m_io/host",
@@ -549,19 +549,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/host.git",
-                "reference": "5351d625402eb9057148050b0985d4fa83bfdcf6"
+                "reference": "ace48484028b86dbb7d10a4eb7db3b6a1ddacf4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/host/zipball/5351d625402eb9057148050b0985d4fa83bfdcf6",
-                "reference": "5351d625402eb9057148050b0985d4fa83bfdcf6",
+                "url": "https://api.github.com/repos/r3m-io/host/zipball/ace48484028b86dbb7d10a4eb7db3b6a1ddacf4a",
+                "reference": "ace48484028b86dbb7d10a4eb7db3b6a1ddacf4a",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "ext-posix": "*",
                 "ext-zlib": "*",
-                "r3m_io/framework": "*"
+                "r3m_io/framework": "dev-root"
             },
             "default-branch": true,
             "type": "package",
@@ -589,7 +589,7 @@
                 "issues": "https://github.com/r3m-io/host/issues",
                 "source": "https://github.com/r3m-io/host/tree/main"
             },
-            "time": "2023-12-28T21:34:20+00:00"
+            "time": "2024-01-12T17:06:57+00:00"
         },
         {
             "name": "r3m_io/log",
@@ -597,12 +597,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/log.git",
-                "reference": "49b28072ca033fe1fd2112f2aadc94962d049341"
+                "reference": "094c335d16c9a7358a87ce405f53d29de9a9c845"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/log/zipball/49b28072ca033fe1fd2112f2aadc94962d049341",
-                "reference": "49b28072ca033fe1fd2112f2aadc94962d049341",
+                "url": "https://api.github.com/repos/r3m-io/log/zipball/094c335d16c9a7358a87ce405f53d29de9a9c845",
+                "reference": "094c335d16c9a7358a87ce405f53d29de9a9c845",
                 "shasum": ""
             },
             "require": {
@@ -637,7 +637,7 @@
                 "issues": "https://github.com/r3m-io/log/issues",
                 "source": "https://github.com/r3m-io/log/tree/main"
             },
-            "time": "2023-12-26T17:39:42+00:00"
+            "time": "2024-01-11T17:48:29+00:00"
         },
         {
             "name": "r3m_io/middleware",
@@ -645,16 +645,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/middleware.git",
-                "reference": "c19ba363b29540880afcbf320fc3c3929e5dd679"
+                "reference": "a96ecc16d55436f03c0bad76d1df3280b93dc6bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/middleware/zipball/c19ba363b29540880afcbf320fc3c3929e5dd679",
-                "reference": "c19ba363b29540880afcbf320fc3c3929e5dd679",
+                "url": "https://api.github.com/repos/r3m-io/middleware/zipball/a96ecc16d55436f03c0bad76d1df3280b93dc6bd",
+                "reference": "a96ecc16d55436f03c0bad76d1df3280b93dc6bd",
                 "shasum": ""
             },
             "require": {
-                "r3m_io/framework": "*"
+                "r3m_io/framework": "dev-root"
             },
             "default-branch": true,
             "type": "library",
@@ -682,7 +682,7 @@
                 "issues": "https://github.com/r3m-io/middleware/issues",
                 "source": "https://github.com/r3m-io/middleware/tree/main"
             },
-            "time": "2023-12-25T22:27:04+00:00"
+            "time": "2024-01-12T17:04:57+00:00"
         },
         {
             "name": "r3m_io/node",
@@ -690,19 +690,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/node.git",
-                "reference": "dc71697f3f833b2e4b6c7cf4a36dd9c215fa78e2"
+                "reference": "a31b918656d2872d6459362e5161b2f6e090ea11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/node/zipball/dc71697f3f833b2e4b6c7cf4a36dd9c215fa78e2",
-                "reference": "dc71697f3f833b2e4b6c7cf4a36dd9c215fa78e2",
+                "url": "https://api.github.com/repos/r3m-io/node/zipball/a31b918656d2872d6459362e5161b2f6e090ea11",
+                "reference": "a31b918656d2872d6459362e5161b2f6e090ea11",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "ext-posix": "*",
                 "ext-zlib": "*",
-                "r3m_io/framework": "*"
+                "r3m_io/framework": "dev-root"
             },
             "default-branch": true,
             "type": "library",
@@ -734,7 +734,7 @@
                 "issues": "https://github.com/r3m-io/node/issues",
                 "source": "https://github.com/r3m-io/node/tree/main"
             },
-            "time": "2023-12-27T09:14:52+00:00"
+            "time": "2024-01-11T20:10:25+00:00"
         },
         {
             "name": "r3m_io/output_filter",
@@ -742,16 +742,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/output_filter.git",
-                "reference": "2c90ce18172753f85a4b9881980babe7cfc7e65f"
+                "reference": "479a9f11d10042af29600fa412800a9c090eb384"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/output_filter/zipball/2c90ce18172753f85a4b9881980babe7cfc7e65f",
-                "reference": "2c90ce18172753f85a4b9881980babe7cfc7e65f",
+                "url": "https://api.github.com/repos/r3m-io/output_filter/zipball/479a9f11d10042af29600fa412800a9c090eb384",
+                "reference": "479a9f11d10042af29600fa412800a9c090eb384",
                 "shasum": ""
             },
             "require": {
-                "r3m_io/framework": "*"
+                "r3m_io/framework": "dev-root"
             },
             "default-branch": true,
             "type": "library",
@@ -780,7 +780,7 @@
                 "issues": "https://github.com/r3m-io/output_filter/issues",
                 "source": "https://github.com/r3m-io/output_filter/tree/main"
             },
-            "time": "2023-12-25T22:33:23+00:00"
+            "time": "2024-01-12T17:02:30+00:00"
         },
         {
             "name": "r3m_io/route",
@@ -788,16 +788,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/route.git",
-                "reference": "c8d9c91a03ed8d6dadaba371a6a5c3626094260f"
+                "reference": "e5929f80285dc35a719b00f034006eee35511b9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/route/zipball/c8d9c91a03ed8d6dadaba371a6a5c3626094260f",
-                "reference": "c8d9c91a03ed8d6dadaba371a6a5c3626094260f",
+                "url": "https://api.github.com/repos/r3m-io/route/zipball/e5929f80285dc35a719b00f034006eee35511b9b",
+                "reference": "e5929f80285dc35a719b00f034006eee35511b9b",
                 "shasum": ""
             },
             "require": {
-                "r3m_io/framework": "*"
+                "r3m_io/framework": "dev-root"
             },
             "default-branch": true,
             "type": "library",
@@ -826,7 +826,7 @@
                 "issues": "https://github.com/r3m-io/route/issues",
                 "source": "https://github.com/r3m-io/route/tree/main"
             },
-            "time": "2023-12-25T22:32:17+00:00"
+            "time": "2024-01-12T17:15:42+00:00"
         },
         {
             "name": "r3m_io/server",
@@ -834,12 +834,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/r3m-io/server.git",
-                "reference": "7d9089ae6600b82e293002350ccf63c935c37900"
+                "reference": "d1a1674d8038e22bd92158542d755461b9828617"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/r3m-io/server/zipball/7d9089ae6600b82e293002350ccf63c935c37900",
-                "reference": "7d9089ae6600b82e293002350ccf63c935c37900",
+                "url": "https://api.github.com/repos/r3m-io/server/zipball/d1a1674d8038e22bd92158542d755461b9828617",
+                "reference": "d1a1674d8038e22bd92158542d755461b9828617",
                 "shasum": ""
             },
             "require": {
@@ -872,7 +872,7 @@
                 "issues": "https://github.com/r3m-io/server/issues",
                 "source": "https://github.com/r3m-io/server/tree/main"
             },
-            "time": "2023-12-29T00:19:25+00:00"
+            "time": "2024-01-12T16:59:35+00:00"
         }
     ],
     "packages-dev": [],
