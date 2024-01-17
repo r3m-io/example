@@ -6,7 +6,7 @@
     <h1><a href="https://www.r3m.io/" title="https://www.r3m.io/"><strong>{{literal}}{{</strong>R3M<strong>}}{{/literal}}</strong></a></h1>
     <h3>About</h3>
     <p>
-        R3M/Framework is a robust, high-performance PHP framework that streamlines the process of developing comprehensive websites and applications. <br>
+        r3m_io/framework is a robust, high-performance PHP framework that streamlines the process of developing comprehensive websites and applications. <br>
         Here are some key attributes that distinguish this framework: <br>
     </p>
     <ol>
@@ -42,7 +42,7 @@
     </li>
     </ol>
     <p>
-        All in all, R3M/Framework fuses power with ease and flexibility, offering an optimal toolset that caters well to contemporary web application development needs.
+        All in all, r3m_io/framework fuses power with ease and flexibility, offering an optimal toolset that caters well to contemporary web application development needs.
     </p>
     <h3>License</h3>
     <pre>
