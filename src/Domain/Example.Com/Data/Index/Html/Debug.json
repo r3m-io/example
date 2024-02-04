@@ -3,10 +3,10 @@
     "class" : "{{config('controller.class')}}",
     "function" : "{{config('controller.function')}}",
     "script" : [
-        "<script src=\"{{server.url('script.r3m.io')}}Js\/Priya\/Latest\/Priya.js?{{config('framework.version')}}.{{$this.build}}\"></script>"
+        "<script src=\"\/Js\/Priya\/Latest\/Priya.js?{{config('framework.version')}}.{{$this.build}}\"></script>"
     ],
     "link" : [
-        "<link rel=\"stylesheet\" href=\"{{server.url('about.r3m.io')}}{{file.basename($this.class)}}\/Css\/{{$this.function|uppercase.first|replace:'_':'.'}}.css?{{config('framework.version')}}.{{$this.build}}\">",
+        "<link rel=\"stylesheet\" href=\"\/{{file.basename($this.class)}}\/Css\/{{$this.function|uppercase.first|replace:'_':'.'}}.css?{{config('framework.version')}}.{{$this.build}}\">",
         "<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">",
         "<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap\" rel=\"stylesheet\">"
     ],
