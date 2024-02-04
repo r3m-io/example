@@ -18,8 +18,8 @@
             <meta name="description" content="{{$html.head.description|default:''}}">
 
 			<link rel="shortcut icon" href="{{$html.head.icon|default:''}}">
-            <link rel="alternate" hreflang="x-default" href="{{host.url()}}">
-            <link rel="canonical" href="{{host.url()}}{{$request.request}}">
+            <link rel="alternate" hreflang="x-default" href="{{config('domain.url')}}">
+            <link rel="canonical" href="{{config('domain.url')}}{{$request.request}}">
             {{if (!is.empty($script))}}
 {{implode("\n\t\t\t", $script)}}
             {{/if}}
