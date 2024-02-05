@@ -121,7 +121,8 @@ trait Main {
         ){
             $record->uuid = $exist['node']->uuid;
             $response = $node->put($class, $node->role_system(), $record);
-        } elseif(!$exist) {
+        }
+        elseif(!$exist) {
             $response = $node->create($class, $node->role_system(), $record);
         }
         if(array_key_exists('node', $response)){
