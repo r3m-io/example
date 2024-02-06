@@ -1,10 +1,10 @@
 {{R3M}}
-{{$request.request = request('request')}}
+{{$request = request()}}
 {{if($request.request === '/')}}
 {{$request.request = ''}}
 {{/if}}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{$request.language|default:'en'}}">
         <head>
             <meta name="author" content="{{$html.head.author|default:''}}">
             <meta http-equiv="content-type" content="{{$html.head.content.type | default:'text/html; charset=UTF-8'}}">
