@@ -2,14 +2,15 @@
 namespace Domain\Example_Com\Controller;
 
 use R3m\Io\App;
-
 use R3m\Io\Config;
-use R3m\Io\Exception\DirectoryCreateException;
+
 use R3m\Io\Module\Cache;
 use R3m\Io\Module\Controller;
+use R3m\Io\Module\Host;
 
 use Exception;
 
+use R3m\Io\Exception\DirectoryCreateException;
 use R3m\Io\Exception\FileWriteException;
 use R3m\Io\Exception\ObjectException;
 use R3m\Io\Exception\LocateException;
@@ -46,7 +47,8 @@ class Index extends Controller {
             $object->logger($logger)->info('Duration: ' . $duration . ' ms', [ 'main' ]);
         }
         $start = microtime(true);
-        if(App::contentType($object) == App::CONTENT_TYPE_HTML){
+        $contentType = App::contentType($object);
+        if($contentType == App::CONTENT_TYPE_HTML){
             $cache_key = Cache::key($object, [
                 'name' => Cache::name($object, [
                     'type' => Cache::ROUTE,
@@ -56,6 +58,8 @@ class Index extends Controller {
                 'ttl' => Cache::INF,
                 'route' => true, // key based on route
                 'host' => true, // key based on host
+                'scheme' => Host::scheme(),
+                'content_type' => $contentType,
                 'expose' => Index::CACHE_ROUTE_REQUEST_EXPOSE
             ]);
             $url = $object->config('controller.dir.data') .
@@ -89,6 +93,9 @@ class Index extends Controller {
                 ]),
                 'ttl' => Cache::INF,
                 'route' => true, // key based on route
+                'host' => true, // key based on host
+                'scheme' => Host::scheme(),
+                'content_type' => $contentType,
                 'expose' => Index::CACHE_ROUTE_REQUEST_EXPOSE
             ]);
             $url = $object->config('controller.dir.data') .
@@ -134,7 +141,8 @@ class Index extends Controller {
         if($object->config('framework.environment') !== Config::MODE_DEVELOPMENT){
             throw new Exception('Debug only available in development mode...');
         }
-        if(App::contentType($object) == App::CONTENT_TYPE_HTML){
+        $contentType = App::contentType($object);
+        if($contentType == App::CONTENT_TYPE_HTML){
             $cache_key = Cache::key($object, [
                 'name' => Cache::name($object, [
                     'type' => Cache::ROUTE,
@@ -144,6 +152,8 @@ class Index extends Controller {
                 'ttl' => Cache::INF,
                 'route' => true, // key based on route
                 'host' => true, // key based on host
+                'scheme' => Host::scheme(),
+                'content_type' => $contentType,
                 'expose' => Index::CACHE_ROUTE_REQUEST_EXPOSE
             ]);
             $url = $object->config('controller.dir.data') .
@@ -178,6 +188,9 @@ class Index extends Controller {
                 ]),
                 'ttl' => Cache::INF,
                 'route' => true, // key based on route
+                'host' => true, // key based on host
+                'scheme' => Host::scheme(),
+                'content_type' => $contentType,
                 'expose' => Index::CACHE_ROUTE_REQUEST_EXPOSE
             ]);
             $url = $object->config('controller.dir.data') .
