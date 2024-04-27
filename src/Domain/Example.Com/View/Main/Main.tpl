@@ -1,7 +1,9 @@
 {{R3M}}
 {{$request = request()}}
 {{if($request.request === '/')}}
-{{$request.request = ''}}
+{{$canonical = config('domain.url')}}
+{{else}}
+{{$canonical = config('domain.url') + $request.request}}
 {{/if}}
 <!DOCTYPE html>
 <html lang="{{$request.language|default:'en'}}">
@@ -19,7 +21,7 @@
 
 			<link rel="shortcut icon" href="{{$html.head.icon|default:''}}">
             <link rel="alternate" hreflang="x-default" href="{{config('domain.url')}}">
-            <link rel="canonical" href="{{config('domain.url')}}{{$request.request}}">
+            <link rel="canonical" href="{{$canonical}}">
             {{if (!is.empty($script))}}
 {{implode("\n\t\t\t", $script)}}
             {{/if}}
